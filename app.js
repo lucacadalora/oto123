@@ -234,7 +234,7 @@
         },
         m6: {
           t: "BYD M6 DM · i",
-          b: "phev family mpv, rp298–390 jt. ini bukan ev murni: ada bensin + colokan. pajak phev di indonesia tidak selalu sama dengan ev (insentif sering lebih ketat / beda skema). kalau jarang ngecas, konsumsi bensin bisa nyerupain hev biasa — tanyakan pola pakai dulu sebelum kejar trim atas. konfirmasi ke diler."
+          b: "phev family mpv, rp298–390 jt. ini bukan ev murni: ada bensin + colokan. pajak phev di indonesia tidak selalu sama dengan ev (insentif sering lebih ketat / beda skema). kalau jarang ngecas, konsumsi bensin bisa nyerupai hev biasa — tanyakan pola pakai dulu sebelum kejar trim atas. konfirmasi ke diler."
         },
         j5: {
           t: "Jaecoo J5 EV · i",
