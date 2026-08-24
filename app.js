@@ -21,8 +21,9 @@
       poster: { bg: "#5f7d3e", ink: "#e8f0d8", mark: "ATTO 1" },
       photos: [
         "https://www.byd.com/material/byd-site/id/product/atto1/exterior/atto1-front-ext.png",
-        "https://www.byd.com/material/byd-site/id/product/atto1/exterior/eksterior-siluetbelakang-atto1.png",
-        "https://www.byd.com/material/byd-site/id/product/atto1/pc/atto1-header.png"
+        "https://imgcdn.oto.com/large/gallery/exterior/177/3260/byd-atto-1-full-front-view-402203.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/177/3260/byd-atto-1-front-angle-low-view-785269.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/177/3260/byd-atto-1-rear-cross-side-view-145439.jpg"
       ],
       infoId: "atto1"
     },
@@ -45,8 +46,9 @@
       poster: { bg: "#2b2e33", ink: "#e7b3c2", mark: "EX2" },
       photos: [
         "https://www.geely.com/-/media/project/web-portal/models/geely-ex2/model-picture-geely-ex2.png",
-        "https://www.datocms-assets.com/202757/1778503384-ex2-22.png",
-        "https://www.geely.com/-/media/project/web-portal/models/geely-ex2/kv/geely-ex2-back.jpg"
+        "https://imgcdn.oto.com/large/gallery/exterior/13/3316/geely-ex2-side-view-100718.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/13/3316/geely-ex2-front-angle-low-view-417145.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/13/3316/geely-ex2-rear-cross-side-view-409892.jpg"
       ],
       infoId: "ex2"
     },
@@ -67,9 +69,7 @@
       photos: [
         "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-angle-low-view-683192.jpg",
         "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-side-view-409963.jpg",
-        "https://wuling.id/assets/images/aira-ev/color-car/milk-tea.png",
-        "https://wuling.id/assets/images/aira-ev/color-car/galaxy-blue.png",
-        "https://wuling.id/assets/images/aira-ev/color-car/starry-black.png"
+        "https://wuling.id/assets/images/aira-ev/color-car/milk-tea.png"
       ],
       infoId: "aira"
     },
@@ -89,9 +89,10 @@
       poster: { bg: "#5c4d6b", ink: "#c8b59a", mark: "Q" },
       photos: [
         "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-dusk-purple-car-thumbnail.webp",
-        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-spark-white-car-thumbnail.webp",
-        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-oat-latte-car-thumbnail.webp",
-        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/thumbnail-side-image-desktop.png"
+        "https://imgcdn.oto.com/large/gallery/exterior/153/3349/chery-q-front-angle-low-view-551981.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/153/3349/chery-q-front-side-view-291010.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/153/3349/chery-q-side-view-307546.jpg",
+        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-spark-white-car-thumbnail.webp"
       ],
       infoId: "cheryq"
     },
@@ -107,8 +108,9 @@
       poster: { bg: "#1f2a36", ink: "#e6d7b8", mark: "M6 DM" },
       photos: [
         "https://www.byd.com/material/dm-i-into/BYDM6DMFRONT.jpg",
-        "https://www.byd.com/material/dm-i-into/m6dmextside.jpg",
-        "https://www.byd.com/material/dm-i-into/m6dmextback.jpg"
+        "https://imgcdn.oto.com/large/gallery/exterior/177/3039/byd-m6-full-front-view-525976.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/177/3039/byd-m6-front-angle-low-view-779791.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/177/3039/byd-m6-rear-cross-side-view-325727.jpg"
       ],
       infoId: "m6"
     },
@@ -128,9 +130,9 @@
       ],
       poster: { bg: "#2f4a38", ink: "#d4d1c8", mark: "J5 EV" },
       photos: [
-        "https://cms.jaecoo.id/uploads/J5_Horizontal_1_c788ba794b.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/185/3176/jaecoo-j5-front-angle-low-view-669032.jpg",
         "https://cms.jaecoo.id/uploads/J5_1_2e7da5b171.jpeg",
-        "https://cms.jaecoo.id/uploads/J5_Vertical_Opt1_1_9928b03e43.jpg"
+        "https://cms.jaecoo.id/uploads/J5_Horizontal_1_c788ba794b.jpg"
       ],
       infoId: "j5"
     },
@@ -146,9 +148,10 @@
       poster: { bg: "#6b5340", ink: "#f0e6d4", mark: "ZENIX" },
       photos: [
         "https://www.toyotaliekmotor.com/uploads/foto_produk/Q_Hybrid_Type_0_3.png",
-        "https://www.toyotaliekmotor.com/uploads/foto_keterangan/img_1.jpg",
-        "https://www.toyotaliekmotor.com/uploads/foto_keterangan/img_2.jpg",
-        "https://www.toyotaliekmotor.com/uploads/foto_produk/Home-Banner-Desktop-1293x628_51.jpg"
+        "https://imgcdn.oto.com/large/gallery/exterior/38/2685/toyota-innova-zenix-front-angle-low-view-880505.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/38/2685/toyota-innova-zenix-side-view-112998.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/38/2685/toyota-innova-zenix-full-rear-view-505886.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/38/2685/toyota-innova-zenix-full-front-view-553043.jpg"
       ],
       infoId: "zenix"
     },
@@ -164,9 +167,9 @@
       poster: { bg: "#7a1f24", ink: "#efe6dc", mark: "XFORCE" },
       photos: [
         "https://www.mitsubishi-motors.com/jp/newsroom/newsrelease/2026/img/20260716_1_01.png",
+        "https://paultan.org/image/2025/03/2025_BIMS_Mitsubishi_XForce_HEV-1-1200x801.jpg",
         "https://paultan.org/image/2025/03/2025_BIMS_Mitsubishi_XForce_HEV-2-1200x801.jpg",
-        "https://paultan.org/image/2025/03/2025_BIMS_Mitsubishi_XForce_HEV-3-1200x801.jpg",
-        "https://paultan.org/image/2025/03/2025_BIMS_Mitsubishi_XForce_HEV-4-1200x801.jpg"
+        "https://paultan.org/image/2025/03/2025_BIMS_Mitsubishi_XForce_HEV-3-1200x801.jpg"
       ],
       infoId: "xforce"
     }
@@ -231,7 +234,7 @@
         },
         m6: {
           t: "BYD M6 DM · i",
-          b: "phev family mpv, rp298–390 jt. ini bukan ev murni: ada bensin + colokan. pajak phev di indonesia tidak selalu sama dengan ev (insentif sering lebih ketat / beda skema). kalau jarang ngecas, konsumsi bensin bisa nyerupai hev biasa — tanyakan pola pakai dulu sebelum kejar trim atas. konfirmasi ke diler."
+          b: "phev family mpv, rp298–390 jt. ini bukan ev murni: ada bensin + colokan. pajak phev di indonesia tidak selalu sama dengan ev (insentif sering lebih ketat / beda skema). kalau jarang ngecas, konsumsi bensin bisa nyerupain hev biasa — tanyakan pola pakai dulu sebelum kejar trim atas. konfirmasi ke diler."
         },
         j5: {
           t: "Jaecoo J5 EV · i",
