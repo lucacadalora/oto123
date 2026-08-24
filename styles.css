@@ -187,6 +187,24 @@ fieldset { border: 0; margin: 0; padding: 0; }
 #bag-empty[hidden], #bag-go[hidden] { display: none !important; }
 
 .poster img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; user-select:none; pointer-events:none; }
-.poster { cursor: ew-resize; background:#eceae4; }
-.spin-hint { position:absolute; right:.7rem; top:.65rem; font-size:.72em; letter-spacing:.14em; text-transform:uppercase; opacity:.4; color:#222; }
+.poster { background:#eceae4; }
 .poster-meta { mix-blend-mode: normal; color:#222; opacity:.38; }
+.spin-btn {
+  appearance: none; position: absolute; top: 50%; transform: translateY(-50%);
+  width: 2rem; height: 2rem; border: 0; border-radius: 50%;
+  background: color-mix(in srgb, white 82%, #111); color: #111;
+  cursor: pointer; font-size: 1.25rem; line-height: 1; padding: 0;
+  z-index: 2;
+}
+.spin-prev { left: .45rem; }
+.spin-next { right: .45rem; }
+.spin-dots {
+  position: absolute; left: 0; right: 0; bottom: .45rem;
+  display: flex; justify-content: center; gap: .28rem; z-index: 2;
+}
+.spin-dot {
+  appearance: none; width: 6px; height: 6px; border-radius: 50%;
+  border: 0; padding: 0; cursor: pointer;
+  background: color-mix(in srgb, #111 28%, white);
+}
+.spin-dot.is-on { background: #111; }

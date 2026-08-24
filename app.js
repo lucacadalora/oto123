@@ -65,11 +65,11 @@
       ],
       poster: { bg: "#1c3f6e", ink: "#d7c4a8", mark: "AIRA" },
       photos: [
+        "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-angle-low-view-683192.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-side-view-409963.jpg",
         "https://wuling.id/assets/images/aira-ev/color-car/milk-tea.png",
         "https://wuling.id/assets/images/aira-ev/color-car/galaxy-blue.png",
-        "https://wuling.id/assets/images/aira-ev/color-car/starry-black.png",
-        "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-angle-low-view-683192.jpg",
-        "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-side-view-409963.jpg"
+        "https://wuling.id/assets/images/aira-ev/color-car/starry-black.png"
       ],
       infoId: "aira"
     },
@@ -362,8 +362,23 @@
   function posterMedia(car) {
     const photos = car.photos || [];
     if (!photos.length) return posterSvg(car);
-    const spin = photos.length > 1 ? `<span class="spin-hint">geser</span>` : "";
-    return `<img src="${photos[0]}" alt="${car.brand} ${car.name}" draggable="false" referrerpolicy="no-referrer">${spin}`;
+    const nav = photos.length > 1
+      ? `<button type="button" class="spin-btn spin-prev" data-spin-dir="-1" aria-label="foto sebelumnya">‹</button>
+        <button type="button" class="spin-btn spin-next" data-spin-dir="1" aria-label="foto berikutnya">›</button>
+        <div class="spin-dots">${photos.map((_, i) => `<button type="button" class="spin-dot${i === 0 ? " is-on" : ""}" data-spin-to="${i}" aria-label="foto ${i + 1}"></button>`).join("")}</div>`
+      : "";
+    return `<img src="${photos[0]}" alt="${car.brand} ${car.name}" draggable="false" referrerpolicy="no-referrer">${nav}`;
+  }
+
+  function showPhoto(box, idx) {
+    const car = CARS.find((c) => c.id === box.dataset.spin);
+    if (!car || !car.photos || !car.photos.length) return;
+    const n = car.photos.length;
+    const i = ((idx % n) + n) % n;
+    const img = box.querySelector("img");
+    if (img) img.src = car.photos[i];
+    box.dataset.i = String(i);
+    box.querySelectorAll(".spin-dot").forEach((d, di) => d.classList.toggle("is-on", di === i));
   }
 
   function applyI18n() {
@@ -389,7 +404,7 @@
       const inCmp = compare.includes(c.id);
       const sw = c.colors.map(([n, hex]) => `<span class="dot" title="${n}" style="background:${hex}"></span>`).join("");
       return `<li class="card" data-id="${c.id}">
-        <div class="poster" data-spin="${c.id}">${posterMedia(c)}<span class="poster-meta">${c.tag}</span></div>
+        <div class="poster" data-spin="${c.id}" data-i="0">${posterMedia(c)}<span class="poster-meta">${c.tag}</span></div>
         <p class="kicker">${c.brand}</p>
         <h3 class="name">${c.name}</h3>
         <div class="price-row">
@@ -501,8 +516,18 @@
       renderBag();
       return;
     }
-    const spinEl = e.target.closest("[data-spin]");
-    if (spinEl && e.type === "click") { /* drag handles spin */ }
+    const stepBtn = e.target.closest("[data-spin-dir]");
+    if (stepBtn) {
+      const box = stepBtn.closest("[data-spin]");
+      const cur = Number(box.dataset.i || 0);
+      showPhoto(box, cur + Number(stepBtn.dataset.spinDir));
+      return;
+    }
+    const toBtn = e.target.closest("[data-spin-to]");
+    if (toBtn) {
+      showPhoto(toBtn.closest("[data-spin]"), Number(toBtn.dataset.spinTo));
+      return;
+    }
     if (e.target.closest("#bag-btn")) { renderBag(); openSheet("bag"); return; }
     const drop = e.target.closest("[data-drop]");
     if (drop) {
@@ -567,33 +592,5 @@
     if (e.key === "Escape") closeSheets();
   });
 
-  function bindSpin() {
-    document.addEventListener("pointerdown", (e) => {
-      const box = e.target.closest("[data-spin]");
-      if (!box) return;
-      const car = CARS.find((c) => c.id === box.dataset.spin);
-      if (!car || !car.photos || car.photos.length < 2) return;
-      const img = box.querySelector("img");
-      if (!img) return;
-      let i = car.photos.indexOf(img.src);
-      if (i < 0) i = 0;
-      const startX = e.clientX;
-      const startI = i;
-      const move = (ev) => {
-        const dx = ev.clientX - startX;
-        const step = Math.round(dx / 36);
-        const n = car.photos.length;
-        const ni = ((startI + step) % n + n) % n;
-        if (car.photos[ni] !== img.src) img.src = car.photos[ni];
-      };
-      const up = () => {
-        window.removeEventListener("pointermove", move);
-        window.removeEventListener("pointerup", up);
-      };
-      window.addEventListener("pointermove", move);
-      window.addEventListener("pointerup", up);
-    });
-  }
   applyI18n();
-  bindSpin();
 })();
