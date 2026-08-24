@@ -44,10 +44,9 @@
       ],
       poster: { bg: "#2b2e33", ink: "#e7b3c2", mark: "EX2" },
       photos: [
-        "https://www.datocms-assets.com/202757/1778503384-ex2-22.png",
         "https://www.geely.com/-/media/project/web-portal/models/geely-ex2/model-picture-geely-ex2.png",
-        "https://www.geely.com/-/media/project/web-portal/models/geely-ex2/kv/geely-ex2-back.jpg",
-        "https://www.geely.com/-/media/project/web-portal/models/geely-ex2/kv/geely-ex2-top-image-kv.jpg"
+        "https://www.datocms-assets.com/202757/1778503384-ex2-22.png",
+        "https://www.geely.com/-/media/project/web-portal/models/geely-ex2/kv/geely-ex2-back.jpg"
       ],
       infoId: "ex2"
     },
@@ -65,11 +64,12 @@
         ["Milk Tea", "#d7c4a8"]
       ],
       poster: { bg: "#1c3f6e", ink: "#d7c4a8", mark: "AIRA" },
-            photos: [
-        "https://wuling.id/assets/images/aira-ev/exterior-revamp/Gallery1v2.png",
-        "https://wuling.id/assets/images/aira-ev/exterior-revamp/Gallery2v2.png",
-        "https://wuling.id/assets/images/aira-ev/exterior-revamp/Gallery3v2.png",
-        "https://wuling.id/assets/images/aira-ev/color-car/milk-tea.png"
+      photos: [
+        "https://wuling.id/assets/images/aira-ev/color-car/milk-tea.png",
+        "https://wuling.id/assets/images/aira-ev/color-car/galaxy-blue.png",
+        "https://wuling.id/assets/images/aira-ev/color-car/starry-black.png",
+        "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-angle-low-view-683192.jpg",
+        "https://imgcdn.oto.com/large/gallery/exterior/110/3368/wuling-aira-ev-front-side-view-409963.jpg"
       ],
       infoId: "aira"
     },
@@ -87,11 +87,11 @@
         ["Spark White", "#f5f3ef"]
       ],
       poster: { bg: "#5c4d6b", ink: "#c8b59a", mark: "Q" },
-            photos: [
-        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/main-image-front.webp",
-        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/thumbnail-side-image-desktop.png",
+      photos: [
         "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-dusk-purple-car-thumbnail.webp",
-        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-spark-white-car-thumbnail.webp"
+        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-spark-white-car-thumbnail.webp",
+        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/colors/chery-q-pure-oat-latte-car-thumbnail.webp",
+        "https://cheryidn.sgp1.cdn.digitaloceanspaces.com/prod/chery-q/thumbnail-side-image-desktop.png"
       ],
       infoId: "cheryq"
     },
@@ -105,7 +105,7 @@
       spec: "plug-in hybrid",
       colors: [["Family", "#1f2a36"]],
       poster: { bg: "#1f2a36", ink: "#e6d7b8", mark: "M6 DM" },
-            photos: [
+      photos: [
         "https://www.byd.com/material/dm-i-into/BYDM6DMFRONT.jpg",
         "https://www.byd.com/material/dm-i-into/m6dmextside.jpg",
         "https://www.byd.com/material/dm-i-into/m6dmextback.jpg"
@@ -144,7 +144,7 @@
       spec: "hybrid · bukan ev",
       colors: [["Zenix", "#6b5340"]],
       poster: { bg: "#6b5340", ink: "#f0e6d4", mark: "ZENIX" },
-            photos: [
+      photos: [
         "https://www.toyotaliekmotor.com/uploads/foto_produk/Q_Hybrid_Type_0_3.png",
         "https://www.toyotaliekmotor.com/uploads/foto_keterangan/img_1.jpg",
         "https://www.toyotaliekmotor.com/uploads/foto_keterangan/img_2.jpg",
@@ -363,7 +363,7 @@
     const photos = car.photos || [];
     if (!photos.length) return posterSvg(car);
     const spin = photos.length > 1 ? `<span class="spin-hint">geser</span>` : "";
-    return `<img src="${photos[0]}" alt="${car.brand} ${car.name}" draggable="false">${spin}`;
+    return `<img src="${photos[0]}" alt="${car.brand} ${car.name}" draggable="false" referrerpolicy="no-referrer">${spin}`;
   }
 
   function applyI18n() {
