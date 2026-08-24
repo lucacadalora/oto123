@@ -1,0 +1,6 @@
+{
+  "name": "oto123",
+  "private": true,
+  "scripts": { "deploy": "wrangler deploy" },
+  "devDependencies": { "wrangler": "^4.125.0" }
+}
