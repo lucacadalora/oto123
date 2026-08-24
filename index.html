@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oto123 — review GIIAS, tanya reviewer</title>
+  <meta name="description" content="Oto123: review side-by-side mobil GIIAS 2026. Bukan diler. Tanya reviewer atau pemilik, isi WA, kota, budget. Harga OTR Jakarta / special — konfirmasi ke diler.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav small" aria-label="utama">
+    <ul class="h-list">
+      <li><a href="#top" class="current" data-i="navHome">home</a></li>
+      <li><a href="#cara" data-i="navHow">cara</a></li>
+      <li><a href="#review" data-i="navReview">review</a></li>
+      <li><a href="#konsul" data-i="navConsult">konsul</a></li>
+    </ul>
+    <div class="nav-right">
+      <button type="button" class="nav-bag" id="bag-btn" aria-controls="bag-sheet">bag <span id="bag-count">0</span></button>
+      <span class="lang" role="group" aria-label="bahasa">
+        <button type="button" data-locale="id" class="is-on">id</button>
+        /
+        <button type="button" data-locale="en">en</button>
+      </span>
+    </div>
+  </nav>
+
+  <header class="wordmark" id="top">
+    <h1>Oto123</h1>
+  </header>
+
+  <section class="intro small" id="home">
+    <p class="lede" data-i="lede">halo — luca. ini review, bukan lot diler. delapan mobil yang rame di giias 2026, dibandingin jujur, trus bisa tanya reviewer atau pemilik yang udah pegang unit. harga di kartu itu otr jakarta / special giias — jangan dianggap closing; konfirmasi ke diler.</p>
+    <p class="giias" data-i="giias">giias 2026: 496.378 pengunjung. toyota 6.175 spk, byd 4.000+. bukan angka penjualan show-wide — gaikindo belum rilis total spk resmi.</p>
+    <p class="person"><span data-i="person">reviewer</span> · luca · jakarta · <a href="#konsul" data-i="ctaInline">tanya reviewer / pemilik</a></p>
+  </section>
+
+  <section class="small sale" id="review">
+    <div class="chip-row" role="tablist" aria-label="filter">
+      <button type="button" class="chip is-on" data-filter="all" data-i="fAll">semua</button>
+      <button type="button" class="chip" data-filter="ev">ev</button>
+      <button type="button" class="chip" data-filter="phev">phev</button>
+      <button type="button" class="chip" data-filter="hev">hybrid</button>
+      <button type="button" class="chip" data-filter="mpv">mpv</button>
+      <button type="button" class="chip" data-filter="suv">suv</button>
+    </div>
+    <p class="hint" data-i="compareHint">ketuk bandingkan (maks 3) atau masukin bag (maks 2) buat konsul. tombol i = catatan pajak / tco, bukan harga rahasia.</p>
+    <ul class="grid" id="car-grid"></ul>
+  </section>
+
+  <section class="small block" id="cara">
+    <h2 data-i="howTitle">cara kerjanya</h2>
+    <ol class="how" id="how-list"></ol>
+    <p class="fine" data-i="disclaimer">oto123 placeholder brand, bukan domain live, bukan mitra resmi gaikindo / merek. kami tidak jual unit. lead dikirim ke reviewer buat ngobrol p2p.</p>
+  </section>
+
+  <section class="small block" id="konsul">
+    <h2 data-i="formTitle">tanya reviewer / pemilik</h2>
+    <p class="form-lede" data-i="formLede">isi wa + kota + budget. pilih 2–3 mobil yang lagi bikin pusing. no spam, luca yang bales.</p>
+    <form id="consult-form" novalidate>
+      <label>nama<input name="name" required autocomplete="name" placeholder="nama panggilan"></label>
+      <label>kota<input name="city" required autocomplete="address-level2" placeholder="jakarta / bandung / surabaya"></label>
+      <label>whatsapp<input name="wa" type="tel" required inputmode="tel" autocomplete="tel" placeholder="08xx atau +62"></label>
+      <label data-i="budgetLabel">budget<input name="budget" required placeholder="mis. 200–280 jt"></label>
+      <fieldset>
+        <legend data-i="carsLegend">lagi bingung antara (2–3)</legend>
+        <div class="car-picks" id="car-picks"></div>
+      </fieldset>
+      <label class="note-label" data-i="noteLabel">catatan<input name="note" placeholder="pakai harian, anak 2, charge di rumah, dll"></label>
+      <button type="submit" class="submit" data-i="submit">kirim ke reviewer</button>
+      <p class="form-status" id="form-status" hidden></p>
+    </form>
+  </section>
+
+  <footer class="small foot">
+    <div>
+      <a href="#cara">cara</a><br>
+      <a href="#review">review</a><br>
+      <a href="#konsul">konsul</a>
+    </div>
+    <div>
+      <span data-i="footWho">luca · oto123</span><br>
+      <span data-i="footWhat">review + konsul p2p</span>
+    </div>
+    <div class="foot-note" data-i="footNote">footnote giias: honda 1.939 spk · hyundai ~2.000. sumber booth, bukan total resmi gaikindo.</div>
+  </footer>
+
+  <div class="sheet-layer" id="info-layer" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="info-title">
+      <div class="sheet-head">
+        <h2 id="info-title"></h2>
+        <button type="button" class="sheet-close" data-close="info">tutup</button>
+      </div>
+      <div class="sheet-body" id="info-body"></div>
+    </div>
+  </div>
+
+  <div class="sheet-layer" id="bag-layer" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="bag-title">
+      <div class="sheet-head">
+        <h2 id="bag-title">bag · konsul</h2>
+        <button type="button" class="sheet-close" data-close="bag">tutup</button>
+      </div>
+      <ul class="bag-list" id="bag-list"></ul>
+      <p class="bag-empty" id="bag-empty" data-i="bagEmpty">kosong. masukin 1–2 mobil buat dibahas.</p>
+      <a class="submit bag-go" href="#konsul" id="bag-go" hidden data-i="bagGo">lanjut isi wa</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
