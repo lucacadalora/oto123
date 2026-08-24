@@ -130,9 +130,8 @@
       ],
       poster: { bg: "#2f4a38", ink: "#d4d1c8", mark: "J5 EV" },
       photos: [
-        "https://imgcdn.oto.com/large/gallery/exterior/185/3176/jaecoo-j5-front-angle-low-view-669032.jpg",
-        "https://cms.jaecoo.id/uploads/J5_1_2e7da5b171.jpeg",
-        "https://cms.jaecoo.id/uploads/J5_Horizontal_1_c788ba794b.jpg"
+        "https://cms.jaecoo.id/uploads/Group_21_1_7f2fa8a308.png",
+        "https://cms.jaecoo.id/uploads/Group_25_faf1e38e0f.png"
       ],
       infoId: "j5"
     },
